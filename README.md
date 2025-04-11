@@ -1,6 +1,22 @@
 # MetaSeminar Master Chatbot
 
-메타세미나 마스터 챗봇은 LangChain과 Streamlit을 사용하여 개발된 AI 챗봇입니다.
+기본적인 설치법은 아래 적어두었습니다. 
+프로젝트가 chat, llm, config 로 구성되어 있지만 실제로 구현되는 부분은
+chat.py의 
+
+
+에이아이 응답부분
+ai_message = st.write_stream(ai_response)
+
+ai_response는 llm.py 의 가장 마지막에서 임포트해서 사용하고 있습니다.
+
+사용자의 질문 부분
+if user_question := st.chat_input(placeholder="질문을 입력하세요"):
+    with st.chat_message("user"):
+        st.write(user_question)
+    st.session_state.message_list.append({"role":"user","content":user_question})
+
+입니다.
 
 ## 🚀 시작하기
 
