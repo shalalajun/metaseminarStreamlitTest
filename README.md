@@ -1,54 +1,43 @@
-# SupercreaturesAI Chat Application
+# MetaSeminar Master Chatbot
 
-이 프로젝트는 Streamlit을 사용하여 개발된 채팅 애플리케이션입니다.
+메타세미나 마스터 챗봇은 LangChain과 Streamlit을 사용하여 개발된 AI 챗봇입니다.
 
-## 프로젝트 구조
-```
-.
-├── .gitignore
-├── env/          # 가상환경 디렉토리
-└── README.md     # 이 파일
-```
+## 🚀 시작하기
 
-## 설치 방법
+### 필수 조건
+- Python 3.10 이상
+- OpenAI API 키
+- Pinecone API 키
 
-1. 저장소 클론
-```bash
-git clone [repository-url]
-cd chat_Streamlit
-```
+### 설치 방법
 
-2. 가상환경 생성 및 활성화
+1. 가상환경 생성 및 활성화
 ```bash
 python -m venv env
 source env/bin/activate  # macOS/Linux
+# 또는
+.\env\Scripts\activate  # Windows
 ```
 
-3. 필요한 패키지 설치
+2. 필요한 패키지 설치
 ```bash
 pip install -r requirements.txt
 ```
 
-## 실행 방법
-
-```bash
-streamlit run app.py
+3. 환경 변수 설정
+프로젝트 루트 디렉토리에 `.env` 파일을 생성하고 다음 내용을 추가합니다:
+```
+OPENAI_API_KEY=your_openai_api_key
+PINECONE_API_KEY=your_pinecone_api_key
 ```
 
-## 주요 기능
+### 실행 방법
 
-- 실시간 채팅 기능
-- AI 기반 응답 생성
-- 사용자 친화적인 인터페이스
+1. Streamlit 앱 실행
+```bash
+streamlit run chat.py
+```
 
-## 기여 방법
-
-1. 이슈 생성
-2. 브랜치 생성 (`git checkout -b feature/AmazingFeature`)
-3. 변경사항 커밋 (`git commit -m 'Add some AmazingFeature'`)
-4. 브랜치 푸시 (`git push origin feature/AmazingFeature`)
-5. Pull Request 생성
-
-## 라이센스
-
-이 프로젝트는 MIT 라이센스를 따릅니다. 자세한 내용은 `LICENSE` 파일을 참조하세요. 
+2. 웹 브라우저에서 접속
+- Streamlit이 자동으로 기본 브라우저를 열어줍니다
+- 또는 수동으로 `http://localhost:8501` 주소로 접속할 수 있습니다
