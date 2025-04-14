@@ -57,3 +57,19 @@ streamlit run chat.py
 2. 웹 브라우저에서 접속
 - Streamlit이 자동으로 기본 브라우저를 열어줍니다
 - 또는 수동으로 `http://localhost:8501` 주소로 접속할 수 있습니다
+
+
+
+### Flask
+
+플라스크로 기존 퍼브리싱에 적용해보았습니다.
+pip install flask==3.0.2 flask-socketio==5.3.6
+
+혹시나 잘 안되면 아래 렝체인 설치
+pip install langchain langchain_core langchain_openai langchain_pinecone langchain_community
+
+실행
+python app.py 
+
+
+
